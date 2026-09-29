@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nathan Lewis - Interactive Resume</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="game">
+
+    <div id="hud">
+
+        <h1>Nathan Lewis - Interactive Resume</h1>
+
+        <p>
+            A / D = Move |
+            SPACE = Jump |
+            ENTER = Enter Cave
+        </p>
+
+    </div>
+
+
+    <div id="world">
+
+
+        <!-- WELCOME -->
+
+        <div
+            class="welcome-sign"
+            style="left: 150px;">
+
+            <div class="sign-title">
+                WELCOME!
+            </div>
+
+            <div class="sign-subtitle">
+                Nathan Lewis
+                <br>
+                Interactive Resume
+            </div>
+
+            <div class="rules">
+
+                <p>
+                    <strong>A / D</strong>
+                    Move left and right
+                </p>
+
+                <p>
+                    <strong>SPACE</strong>
+                    Jump
+                </p>
+
+                <p>
+                    <strong>ENTER</strong>
+                    Enter resume sections
+                </p>
+
+                <p>
+                    <strong>Jump on monsters</strong>
+                    to defeat them
+                </p>
+
+                <p>
+                    <strong>Watch out for fire!</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- STARTING ROCK -->
+
+        <div
+            class="rock"
+            style="left: 700px;">
+        </div>
+
+
+        <!-- FIRE -->
+
+        <div
+            class="fire"
+            style="left: 1050px;">
+
+            <div class="flame-outer"></div>
+            <div class="flame-middle"></div>
+            <div class="flame-inner"></div>
+
+        </div>
+
+
+        <!-- HOME -->
+
+        <div
+            id="homeDoor"
+            class="cave"
+            style="left: 1450px;">
+
+            <div class="cave-opening">
+
+                <span>
+                    HOME
+                    <br>
+                    PRESS ENTER
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOB -->
+
+        <div
+            class="big-mob"
+            style="left: 1750px;">
+
+            <div class="horn left-horn"></div>
+            <div class="horn right-horn"></div>
+
+            <div class="monster-eye left-monster-eye"></div>
+            <div class="monster-eye right-monster-eye"></div>
+
+            <div class="monster-mouth"></div>
+
+        </div>
+
+
+        <!-- FIRE BEFORE MOUNTAIN -->
+
+        <div
+            class="fire"
+            style="left: 2050px;">
+
+            <div class="flame-outer"></div>
+            <div class="flame-middle"></div>
+            <div class="flame-inner"></div>
+
+        </div>
+
+
+        <!-- GIANT MOUNTAIN -->
+
+        <div
+            class="mountain"
+            style="left: 2300px;">
+
+            <div class="mountain-snow"></div>
+
+            <div class="mountain-label">
+                MOUNTAIN
+            </div>
+
+        </div>
+
+
+        <!-- MOUNTAIN FIRE 1 -->
+
+        <div
+            class="fire mountain-fire"
+            style="left: 2600px;">
+
+            <div class="flame-outer"></div>
+            <div class="flame-middle"></div>
+            <div class="flame-inner"></div>
+
+        </div>
+
+
+        <!-- MOUNTAIN MOB 1 -->
+
+        <div
+            class="mountain-mob big-mob"
+            style="left: 2750px;">
+
+            <div class="horn left-horn"></div>
+            <div class="horn right-horn"></div>
+
+            <div class="monster-eye left-monster-eye"></div>
+            <div class="monster-eye right-monster-eye"></div>
+
+            <div class="monster-mouth"></div>
+
+        </div>
+
+
+
+        <!-- MOUNTAIN MOB 2 -->
+
+        <div
+            class="mountain-mob big-mob"
+            style="left: 3200px;">
+
+            <div class="horn left-horn"></div>
+            <div class="horn right-horn"></div>
+
+            <div class="monster-eye left-monster-eye"></div>
+            <div class="monster-eye right-monster-eye"></div>
+
+            <div class="monster-mouth"></div>
+
+        </div>
+
+
+        <!-- MOUNTAIN FIRE 3 -->
+
+        <div
+            class="fire mountain-fire"
+            style="left: 3450px;">
+
+            <div class="flame-outer"></div>
+            <div class="flame-middle"></div>
+            <div class="flame-inner"></div>
+
+        </div>
+
+
+        <!-- MOUNTAIN MOB 3 -->
+
+        <div
+            class="mountain-mob big-mob"
+            style="left: 3650px;">
+
+            <div class="horn left-horn"></div>
+            <div class="horn right-horn"></div>
+
+            <div class="monster-eye left-monster-eye"></div>
+            <div class="monster-eye right-monster-eye"></div>
+
+            <div class="monster-mouth"></div>
+
+        </div>
+
+
+        <!-- EXPERIENCE -->
+
+        <div
+            id="experienceDoor"
+            class="cave"
+            style="left: 4200px;">
+
+            <div class="cave-opening">
+
+                <span>
+                    EXPERIENCE
+                    <br>
+                    PRESS ENTER
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- LARGE ROCK -->
+
+        <div
+            class="rock large-rock"
+            style="left: 4650px;">
+        </div>
+
+
+        <!-- PLATFORM -->
+
+        <div
+            class="platform"
+            style="
+                left: 5000px;
+                bottom: 42vh;
+                width: 220px;
+            ">
+
+            <span>
+                KEEP GOING
+            </span>
+
+        </div>
+
+
+        <!-- FIRE -->
+
+        <div
+            class="fire"
+            style="left: 5400px;">
+
+            <div class="flame-outer"></div>
+            <div class="flame-middle"></div>
+            <div class="flame-inner"></div>
+
+        </div>
+
+
+        <!-- MOB -->
+
+        <div
+            class="big-mob"
+            style="left: 5750px;">
+
+            <div class="horn left-horn"></div>
+            <div class="horn right-horn"></div>
+
+            <div class="monster-eye left-monster-eye"></div>
+            <div class="monster-eye right-monster-eye"></div>
+
+            <div class="monster-mouth"></div>
+
+        </div>
+
+
+        <!-- PORTFOLIO -->
+
+        <div
+            id="portfolioDoor"
+            class="cave"
+            style="left: 6200px;">
+
+            <div class="cave-opening">
+
+                <span>
+                    PORTFOLIO
+                    <br>
+                    PRESS ENTER
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL ROCK -->
+
+        <div
+            class="rock"
+            style="left: 6600px;">
+        </div>
+
+
+        <!-- GROUND -->
+
+        <div id="ground"></div>
+
+
+        <!-- PLAYER -->
+
+        <div id="player">
+
+            <div class="hair"></div>
+
+            <div class="head">
+
+                <div class="eye left-eye"></div>
+                <div class="eye right-eye"></div>
+
+            </div>
+
+            <div class="body"></div>
+
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+
+            <div class="leg left-leg"></div>
+            <div class="leg right-leg"></div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,805 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #111;
+    font-family: Arial, sans-serif;
+}
+
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #55c7ff;
+}
+
+
+#world {
+    position: absolute;
+
+    width: 7000px;
+    height: 125vh;
+
+    top: 0;
+    left: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #55c7ff 0%,
+            #a5e8ff 65%,
+            #62b849 65%,
+            #62b849 100%
+        );
+}
+
+
+/* HUD */
+
+#hud {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 12px;
+
+    text-align: center;
+
+    color: white;
+
+    background: rgba(0,0,0,.75);
+
+    z-index: 100;
+}
+
+
+#hud h1 {
+    margin: 0;
+}
+
+
+#hud p {
+    margin: 5px 0 0;
+}
+
+
+/* GROUND */
+
+#ground {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 7000px;
+    height: 30vh;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #57371d 0px,
+            #57371d 50px,
+            #674323 50px,
+            #674323 100px
+        );
+
+    border-top:
+        12px solid #319536;
+
+    z-index: 5;
+}
+
+
+/* WELCOME */
+
+.welcome-sign {
+    position: absolute;
+
+    left: 150px;
+    bottom: 42vh;
+
+    width: 420px;
+
+    padding: 20px;
+
+    background: #f5d76e;
+
+    border: 8px solid #70451f;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 0 #402510,
+        0 15px 20px rgba(0,0,0,.3);
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+
+.sign-title {
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #e74c3c;
+
+    text-shadow:
+        3px 3px white,
+        5px 5px #70451f;
+}
+
+
+.sign-subtitle {
+    margin-top: 8px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.rules {
+    margin-top: 15px;
+
+    padding: 10px;
+
+    background:
+        rgba(255,255,255,.65);
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+
+.rules p {
+    margin: 8px 0;
+}
+
+
+/* PLAYER */
+
+#player {
+    position: absolute;
+
+    width: 60px;
+    height: 110px;
+
+    left: 100px;
+
+    bottom: 30vh;
+
+    z-index: 30;
+}
+
+
+.hair {
+    position: absolute;
+
+    top: 0;
+    left: 10px;
+
+    width: 40px;
+    height: 25px;
+
+    background: #f4d03f;
+
+    border-radius:
+        20px 20px 8px 8px;
+
+    z-index: 3;
+}
+
+
+.head {
+    position: absolute;
+
+    top: 15px;
+    left: 12px;
+
+    width: 36px;
+    height: 36px;
+
+    background: #f2c6a0;
+
+    border-radius: 50%;
+
+    border: 3px solid #333;
+}
+
+
+.eye {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    background: #3498db;
+
+    border-radius: 50%;
+
+    top: 13px;
+}
+
+
+.head .left-eye {
+    left: 7px;
+}
+
+
+.head .right-eye {
+    right: 7px;
+}
+
+
+.body {
+    position: absolute;
+
+    top: 48px;
+    left: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #3498db;
+
+    border: 3px solid #222;
+
+    border-radius: 10px;
+}
+
+
+.arm {
+    position: absolute;
+
+    top: 50px;
+
+    width: 13px;
+    height: 38px;
+
+    background: #f2c6a0;
+
+    border: 3px solid #222;
+
+    border-radius: 8px;
+}
+
+
+.left-arm {
+    left: 0;
+}
+
+
+.right-arm {
+    right: 0;
+}
+
+
+.leg {
+    position: absolute;
+
+    top: 85px;
+
+    width: 15px;
+    height: 30px;
+
+    background: #263238;
+
+    border: 3px solid #222;
+
+    border-radius: 5px;
+}
+
+
+.left-leg {
+    left: 12px;
+}
+
+
+.right-leg {
+    right: 12px;
+}
+
+
+/* CAVES */
+
+.cave {
+    position: absolute;
+
+    bottom: 30vh;
+
+    width: 210px;
+    height: 230px;
+
+    z-index: 10;
+}
+
+
+.cave::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 210px;
+    height: 230px;
+
+    background: #625b55;
+
+    border: 8px solid #363331;
+
+    border-radius:
+        105px 105px 15px 15px;
+
+    box-shadow:
+        0 10px 0 #292725;
+}
+
+
+.cave-opening {
+    position: absolute;
+
+    left: 38px;
+    bottom: 0;
+
+    width: 134px;
+    height: 180px;
+
+    background: #101010;
+
+    border: 8px solid #252525;
+
+    border-radius:
+        70px 70px 0 0;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+.cave-opening span {
+    position: absolute;
+
+    top: -50px;
+    left: -20px;
+
+    width: 170px;
+
+    padding: 9px;
+
+    background: #f1c40f;
+
+    border: 4px solid #5b4200;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* ROCKS */
+
+.rock {
+    position: absolute;
+
+    bottom: 30vh;
+
+    width: 120px;
+    height: 110px;
+
+    background: #686868;
+
+    border: 7px solid #3c3c3c;
+
+    border-radius:
+        60% 40% 45% 50%;
+
+    box-shadow:
+        10px 10px 0 #454545;
+
+    z-index: 12;
+}
+
+
+.large-rock {
+    width: 180px;
+    height: 160px;
+}
+
+
+/* PLATFORMS */
+
+.platform {
+    position: absolute;
+
+    height: 35px;
+
+    background: #795548;
+
+    border: 6px solid #4e342e;
+
+    border-radius: 10px;
+
+    z-index: 12;
+
+    box-shadow:
+        0 8px 0 #3a2722;
+}
+
+
+.platform span {
+    position: absolute;
+
+    top: -30px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* FIRE */
+
+.fire {
+    position: absolute;
+
+    bottom: 30vh;
+
+    width: 75px;
+    height: 105px;
+
+    z-index: 20;
+
+    filter:
+        drop-shadow(0 0 10px #ff4500)
+        drop-shadow(0 0 25px #ff8c00);
+}
+
+
+.flame-outer {
+    position: absolute;
+
+    left: 5px;
+    bottom: 0;
+
+    width: 65px;
+    height: 100px;
+
+    background: #ff3300;
+
+    border-radius:
+        50% 50% 45% 45% /
+        70% 70% 30% 30%;
+
+    transform:
+        rotate(-5deg);
+}
+
+
+.flame-middle {
+    position: absolute;
+
+    left: 15px;
+    bottom: 0;
+
+    width: 45px;
+    height: 78px;
+
+    background: #ff9500;
+
+    border-radius:
+        50% 50% 45% 45% /
+        70% 70% 30% 30%;
+
+    transform:
+        rotate(5deg);
+}
+
+
+.flame-inner {
+    position: absolute;
+
+    left: 27px;
+    bottom: 0;
+
+    width: 22px;
+    height: 53px;
+
+    background: #fff200;
+
+    border-radius:
+        50% 50% 40% 40% /
+        70% 70% 30% 30%;
+}
+
+
+.flame-outer {
+    animation:
+        flameOuter .35s infinite alternate;
+}
+
+
+.flame-middle {
+    animation:
+        flameMiddle .25s infinite alternate;
+}
+
+
+.flame-inner {
+    animation:
+        flameInner .2s infinite alternate;
+}
+
+
+@keyframes flameOuter {
+
+    from {
+        transform:
+            rotate(-5deg)
+            scaleY(1);
+    }
+
+    to {
+        transform:
+            rotate(5deg)
+            scaleY(1.12);
+    }
+}
+
+
+@keyframes flameMiddle {
+
+    from {
+        transform:
+            rotate(5deg)
+            scaleY(1);
+    }
+
+    to {
+        transform:
+            rotate(-5deg)
+            scaleY(1.15);
+    }
+}
+
+
+@keyframes flameInner {
+
+    from {
+        transform:
+            scaleY(1);
+    }
+
+    to {
+        transform:
+            scaleY(1.2);
+    }
+}
+
+
+/* MOUNTAIN */
+
+.mountain {
+    position: absolute;
+
+    bottom: 30vh;
+
+    width: 1500px;
+    height: 760px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #68736a 0%,
+            #4e5750 45%,
+            #303631 100%
+        );
+
+    clip-path:
+        polygon(
+            0% 100%,
+            8% 85%,
+            16% 76%,
+            24% 64%,
+            32% 56%,
+            40% 43%,
+            48% 30%,
+            56% 15%,
+            62% 0%,
+            68% 16%,
+            76% 32%,
+            84% 51%,
+            92% 73%,
+            100% 100%
+        );
+
+    z-index: 7;
+}
+
+
+.mountain-snow {
+    position: absolute;
+
+    left: 780px;
+    top: 20px;
+
+    width: 190px;
+    height: 130px;
+
+    background: #f2f5f5;
+
+    clip-path:
+        polygon(
+            0 100%,
+            50% 0,
+            100% 100%
+        );
+
+    opacity: .95;
+}
+
+
+.mountain-label {
+    position: absolute;
+
+    top: 110px;
+    left: 600px;
+
+    color: white;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    text-shadow:
+        4px 4px #222;
+
+    transform:
+        rotate(-8deg);
+}
+
+
+/* MOBS */
+
+.big-mob {
+    position: absolute;
+
+    bottom: 30vh;
+
+    width: 90px;
+    height: 90px;
+
+    background: #6c3483;
+
+    border:
+        7px solid #35163f;
+
+    border-radius:
+        50% 50% 40% 40%;
+
+    z-index: 25;
+
+    box-shadow:
+        0 8px 0 #35163f;
+
+    animation:
+        monsterBounce 1s infinite;
+}
+
+
+.horn {
+    position: absolute;
+
+    top: -28px;
+
+    width: 22px;
+    height: 35px;
+
+    background: #eee;
+
+    border: 5px solid #444;
+
+    border-radius:
+        50% 50% 10% 10%;
+}
+
+
+.left-horn {
+    left: 8px;
+
+    transform:
+        rotate(-25deg);
+}
+
+
+.right-horn {
+    right: 8px;
+
+    transform:
+        rotate(25deg);
+}
+
+
+.monster-eye {
+    position: absolute;
+
+    top: 23px;
+
+    width: 18px;
+    height: 18px;
+
+    background: #ff3333;
+
+    border:
+        3px solid #111;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px red;
+}
+
+
+.left-monster-eye {
+    left: 17px;
+}
+
+
+.right-monster-eye {
+    right: 17px;
+}
+
+
+.monster-mouth {
+    position: absolute;
+
+    left: 20px;
+    bottom: 15px;
+
+    width: 50px;
+    height: 25px;
+
+    background: #111;
+
+    border-radius:
+        5px 5px 20px 20px;
+
+    border:
+        3px solid #222;
+}
+
+
+@keyframes monsterBounce {
+
+    0% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+
+    100% {
+        transform:
+            translateY(0);
+    }
+}
