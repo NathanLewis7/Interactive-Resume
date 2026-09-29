@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nathan Lewis - Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #222;
+        }
+
+        .portfolio-page {
+            min-height: 100vh;
+            background:
+                linear-gradient(
+                    to bottom,
+                    #55c7ff 0%,
+                    #a5e8ff 65%,
+                    #62b849 65%,
+                    #62b849 100%
+                );
+            padding: 40px 20px;
+        }
+
+        .portfolio-card {
+            width: 1000px;
+            max-width: 95%;
+            margin: auto;
+            background: white;
+            border: 6px solid #333;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 10px 10px 0px #222;
+        }
+
+        /* HEADER */
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title h1 {
+            margin: 0;
+            font-size: 50px;
+            color: #1d4ed8;
+            text-shadow: 3px 3px 0px #ccc;
+        }
+
+        .page-title p {
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* PROJECT INDEX */
+
+        .project-index {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-index a {
+            display: inline-block;
+            margin: 6px;
+            padding: 10px 18px;
+            background: #eaf3ff;
+            color: #1d4ed8;
+            font-weight: bold;
+            text-decoration: none;
+            border: 3px solid #1d4ed8;
+            border-radius: 10px;
+        }
+
+        .project-index a:hover,
+        .project-index a:focus-visible {
+            background: #1d4ed8;
+            color: white;
+        }
+
+        /* PROJECT */
+
+        .project {
+            margin-bottom: 45px;
+            border: 4px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 6px 6px 0px #aaa;
+        }
+
+        .project-header {
+            background: #1d4ed8;
+            color: white;
+            padding: 22px 25px;
+        }
+
+        .project-header h2 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .project-header p {
+            margin-bottom: 0;
+            font-size: 17px;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            color: #1d4ed8;
+            font-size: 23px;
+            margin-top: 25px;
+        }
+
+        .project-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .project-content p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* SCREENSHOTS */
+
+        .screenshot {
+            margin: 0 0 25px;
+        }
+
+        .screenshot img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 4px solid #222;
+            border-radius: 12px;
+            background: #111;
+        }
+
+        .screenshot figcaption {
+            margin-top: 8px;
+            font-size: 15px;
+            color: #555;
+            text-align: center;
+        }
+
+        .screenshot-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .screenshot-pair .screenshot {
+            margin: 0;
+        }
+
+        /* SKILLS */
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            background: #eaf3ff;
+            border: 3px solid #1d4ed8;
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* CALLOUT BOXES */
+
+        .challenge {
+            background: #fff4c2;
+            border: 3px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .learning {
+            background: #e8f7e8;
+            border: 3px solid #319536;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .future {
+            background: #f3f3f3;
+            border: 3px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .challenge p:first-child,
+        .learning p:first-child,
+        .future p:first-child {
+            margin-top: 0;
+        }
+
+        .challenge p:last-child,
+        .learning p:last-child,
+        .future p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 8px;
+            background: #1d4ed8;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 3px solid #333;
+            box-shadow: 4px 4px 0px #222;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 0px #222;
+        }
+
+        .button:focus-visible,
+        .project-index a:focus-visible {
+            outline: 4px solid #f59e0b;
+            outline-offset: 2px;
+        }
+
+        .back-button {
+            background: #319536;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button:hover {
+                transform: none;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .portfolio-card {
+                padding: 25px;
+            }
+
+            .page-title h1 {
+                font-size: 38px;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-content {
+                padding: 20px;
+            }
+
+            .screenshot-pair {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="portfolio-page">
+
+    <div class="portfolio-card">
+
+        <!-- PAGE HEADER -->
+
+        <div class="page-title">
+
+            <h1>My Portfolio</h1>
+
+            <p>
+                Projects that demonstrate how I apply technology
+                to solve problems and build useful applications.
+            </p>
+
+        </div>
+
+        <div class="project-index">
+            <a href="#poker">Poker Game</a>
+            <a href="#streaming">Streaming Website</a>
+        </div>
+
+
+        <!-- PROJECT 1: POKER -->
+
+        <div class="project" id="poker">
+
+            <div class="project-header">
+
+                <h2>Poker Game</h2>
+
+                <p>Java • GUI Development • Game Logic • AI</p>
+
+            </div>
+
+            <div class="project-content">
+
+                <figure class="screenshot">
+                    <img src="images/PokerSS.png"
+                         alt="Screenshot of the Texas Hold'em poker game showing the green table, community cards, and betting buttons">
+                    <figcaption>The poker game during a hand</figcaption>
+                </figure>
+
+                <h3>Project Overview</h3>
+
+                <p>
+                    This project is a 1v1 Texas Hold'em poker game
+                    developed in Java. I designed the application
+                    around a graphical user interface that allows
+                    the player to interact with the game through
+                    buttons for checking, calling, raising, and
+                    folding. Both players start with $1000, the
+                    blinds are $10 and $20, and the match ends when
+                    one player runs out of chips.
+                </p>
+
+                <h3>My Role</h3>
+
+                <p>
+                    I served as the project manager and developer.
+                    I worked on the game's design and implementation,
+                    including the graphical interface, card system,
+                    betting mechanics, player management, and
+                    artificial intelligence opponent.
+                </p>
+
+                <h3>What I Built</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Java Swing GUI</div>
+                    <div class="skill">Poker Game Logic</div>
+                    <div class="skill">AI Opponent</div>
+                    <div class="skill">Betting System</div>
+                    <div class="skill">Card Evaluation</div>
+                    <div class="skill">Game State Management</div>
+                </div>
+
+                <h3>Main Challenge</h3>
+
+                <div class="challenge">
+
+                    <p>
+                        One of the more difficult parts of the project
+                        was creating the betting and AI decision-making
+                        system. The game had to keep track of player
+                        contributions, the pot, blinds, betting rounds,
+                        and whose turn it was. The dealer button also
+                        alternates every hand, which changes who posts
+                        the small blind and who acts first.
+                    </p>
+
+                    <p>
+                        I also had to create logic that evaluates poker
+                        hands, including pairs, two pair, three of a
+                        kind, straights, flushes, full houses, four of
+                        a kind, straight flushes, and royal flushes.
+                        The AI uses the strength of its hand to decide
+                        whether to check, bet, call, raise, or fold, and
+                        it occasionally bluffs with a weak hand.
+                    </p>
+
+                </div>
+
+                <h3>Technical Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Java</div>
+                    <div class="skill">Object-Oriented Programming</div>
+                    <div class="skill">Java Swing</div>
+                    <div class="skill">Event Handling</div>
+                    <div class="skill">Data Structures</div>
+                    <div class="skill">Game Logic</div>
+                </div>
+
+                <h3>Transferable Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Problem Solving</div>
+                    <div class="skill">Project Management</div>
+                    <div class="skill">Debugging</div>
+                    <div class="skill">Organization</div>
+                    <div class="skill">Critical Thinking</div>
+                    <div class="skill">Persistence</div>
+                </div>
+
+                <h3>What I Learned</h3>
+
+                <div class="learning">
+
+                    <p>
+                        This project helped me move beyond writing
+                        individual pieces of code and taught me how
+                        those pieces work together to create a complete
+                        application.
+                    </p>
+
+                    <p>
+                        I gained experience designing a graphical
+                        interface, managing game states, creating
+                        decision-making logic, and debugging a
+                        larger Java application.
+                    </p>
+
+                </div>
+
+                <h3>What I Would Improve</h3>
+
+                <div class="future">
+
+                    <p>
+                        The AI's decisions are still fairly simple and
+                        can sometimes fold a strong hand, so the next
+                        step is tuning how it weighs hand strength
+                        against the size of a bet. I would also add
+                        better tie-breaking when both players have the
+                        same type of hand.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2: STREAMING WEBSITE -->
+
+        <div class="project" id="streaming">
+
+            <div class="project-header">
+
+                <h2>Self-Hosted Streaming Website</h2>
+
+                <p>Java • Web Server • HTML • CSS</p>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="screenshot-pair">
+
+                    <figure class="screenshot">
+                        <img src="images/movies.png"
+                             alt="Screenshot of the Movies page with poster cards for The Dark Knight, Interstellar, and Avatar">
+                        <figcaption>Movies page</figcaption>
+                    </figure>
+
+                    <figure class="screenshot">
+                        <img src="images/Profiles.png"
+                             alt="Screenshot of the Who is watching profile selection screen">
+                        <figcaption>Profile selection screen</figcaption>
+                    </figure>
+
+                </div>
+
+                <h3>Project Overview</h3>
+
+                <p>
+                    This project is a Netflix-style website that I
+                    hosted myself. Instead of using a web framework, I
+                    wrote a web server in Java that listens on port
+                    8080 and sends back the pages directly. Visitors
+                    can move between a home page, a movies page, a TV
+                    shows page, and a "Who is watching?" profile
+                    screen.
+                </p>
+
+                <h3>My Role</h3>
+
+                <p>
+                    I designed and built the whole site: the Java
+                    server, the page layouts, the dark theme, and the
+                    navigation between pages.
+                </p>
+
+                <h3>What I Built</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Java Web Server</div>
+                    <div class="skill">Four Linked Pages</div>
+                    <div class="skill">Movie and Show Grids</div>
+                    <div class="skill">Profile Selection Screen</div>
+                    <div class="skill">Dark Streaming Theme</div>
+                    <div class="skill">Hover Effects</div>
+                </div>
+
+                <h3>Main Challenge</h3>
+
+                <div class="challenge">
+
+                    <p>
+                        The biggest challenge was understanding how a
+                        web server actually works. Each page has its
+                        own handler, and the server has to match a web
+                        address such as /movies to the correct handler
+                        and send back a complete response.
+                    </p>
+
+                    <p>
+                        I also had to keep the layout consistent
+                        across pages. I used CSS flexbox to line up
+                        the posters and profiles, and I kept the same
+                        navigation bar and color scheme on every page
+                        so the site feels like one application.
+                    </p>
+
+                </div>
+
+                <h3>Technical Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Java</div>
+                    <div class="skill">HTTP Requests and Responses</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS Flexbox</div>
+                    <div class="skill">Request Routing</div>
+                    <div class="skill">Self-Hosting</div>
+                </div>
+
+                <h3>Transferable Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Problem Solving</div>
+                    <div class="skill">Troubleshooting</div>
+                    <div class="skill">Attention to Detail</div>
+                    <div class="skill">Independent Learning</div>
+                    <div class="skill">Design Thinking</div>
+                    <div class="skill">Persistence</div>
+                </div>
+
+                <h3>What I Learned</h3>
+
+                <div class="learning">
+
+                    <p>
+                        This project showed me what happens between
+                        typing an address into a browser and seeing a
+                        page. I learned how a server receives a
+                        request, chooses a handler, and sends a
+                        response, and how HTML and CSS turn that
+                        response into something people can use.
+                    </p>
+
+                    <p>
+                        Hosting the site myself also gave me
+                        hands-on experience with ports, network
+                        access, and testing a service from other
+                        devices.
+                    </p>
+
+                </div>
+
+                <h3>How This Prepares Me for My Career</h3>
+
+                <div class="future">
+
+                    <p>
+                        Web servers, requests, ports, and network
+                        access come up constantly in IT work. Building
+                        one from scratch gave me a working
+                        understanding of these ideas that I can apply
+                        to troubleshooting, supporting users, and
+                        learning new server technologies.
+                    </p>
+
+                </div>
+
+                <h3>What I Would Improve</h3>
+
+                <div class="future">
+
+                    <p>
+                        Right now the movie and show lists are written
+                        directly into each page, and the posters load
+                        from other websites. I would move the titles
+                        into a data file or database, host the images
+                        myself, and add real video playback and
+                        separate profiles.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FUTURE PROJECTS -->
+
+        <div class="project">
+
+            <div class="project-header">
+
+                <h2>More Projects Coming Soon</h2>
+
+                <p>Additional work samples will be added here.</p>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    This portfolio will continue to grow as I add
+                    projects from my Information Technology coursework,
+                    programming work, networking experience, and
+                    personal projects.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="buttons">
+
+            <a
+                href="https://nathanlewis7.github.io/Interactive-Resume/index.html?return=portfolio"
+                class="button back-button">
+
+                Back to Game
+
+            </a>
+
+            <a
+                href="experience.html"
+                class="button">
+
+                View My Experience
+
+            </a>
+
+            <a
+                href="homepage.html"
+                class="button">
+
+                Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

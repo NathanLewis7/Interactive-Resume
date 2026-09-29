@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nathan Lewis - Experience</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #222;
+        }
+
+        .experience-page {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #55c7ff 0%,
+                    #a5e8ff 65%,
+                    #62b849 65%,
+                    #62b849 100%
+                );
+
+            padding: 40px 20px;
+        }
+
+        .experience-card {
+            width: 1000px;
+            max-width: 95%;
+            margin: auto;
+
+            background: white;
+
+            border: 6px solid #333;
+            border-radius: 20px;
+
+            padding: 45px;
+
+            box-shadow: 10px 10px 0px #222;
+        }
+
+        /* HEADER */
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            margin: 0;
+
+            font-size: 50px;
+
+            color: #1d4ed8;
+
+            text-shadow: 3px 3px 0px #ccc;
+        }
+
+        .page-title p {
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-section {
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: 30px;
+
+            color: #1d4ed8;
+
+            border-bottom: 4px solid #1d4ed8;
+
+            padding-bottom: 8px;
+
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .job-info {
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .job-description {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* SKILLS */
+
+        .skill-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .skill-box {
+            background: #eaf3ff;
+
+            border: 3px solid #1d4ed8;
+
+            border-radius: 12px;
+
+            padding: 18px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+        }
+
+        /* WHAT I BUILD */
+
+        .build-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 10px;
+
+            margin-top: 20px;
+        }
+
+        .build-box {
+            background: #f3f3f3;
+
+            border: 3px solid #333;
+
+            border-radius: 10px;
+
+            padding: 15px 8px;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            min-height: 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        /* TAKEAWAYS */
+
+        .takeaway-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .takeaway {
+            background: #fff4c2;
+
+            border: 3px solid #333;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            box-shadow: 5px 5px 0px #aaa;
+        }
+
+        .takeaway-number {
+            font-size: 28px;
+
+            font-weight: bold;
+
+            color: #1d4ed8;
+        }
+
+        .takeaway h3 {
+            margin-bottom: 10px;
+        }
+
+        .takeaway p {
+            line-height: 1.5;
+        }
+
+        /* EMPLOYER VALUE */
+
+        .value-box {
+            background: #e8f7e8;
+
+            border: 4px solid #319536;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        /* ADDITIONAL EXPERIENCE */
+
+        .additional {
+            background: #f3f3f3;
+
+            border: 3px solid #333;
+
+            border-radius: 12px;
+
+            padding: 25px;
+        }
+
+        .additional h3 {
+            margin-top: 0;
+
+            font-size: 24px;
+        }
+
+        .additional p {
+            line-height: 1.6;
+
+            font-size: 17px;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            text-align: center;
+
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 15px 25px;
+
+            margin: 8px;
+
+            background: #1d4ed8;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 10px;
+
+            border: 3px solid #333;
+
+            box-shadow: 4px 4px 0px #222;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+
+            box-shadow: 6px 6px 0px #222;
+        }
+
+        .back-button {
+            background: #319536;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .experience-card {
+                padding: 25px;
+            }
+
+            .page-title h1 {
+                font-size: 38px;
+            }
+
+            .build-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .takeaway-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="experience-page">
+
+    <div class="experience-card">
+
+        <!-- PAGE HEADER -->
+
+        <div class="page-title">
+
+            <h1>My Experience</h1>
+
+            <p>
+                Turning hands-on technical experience into IT skills.
+            </p>
+
+        </div>
+
+
+        <!-- IMCJAX -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                IMCJax
+            </h2>
+
+            <h2 class="job-title">
+                Low Voltage Technician
+            </h2>
+
+            <div class="job-info">
+                Jacksonville, FL | May 2026 - Present
+            </div>
+
+            <p class="job-description">
+
+                My experience as a Low Voltage Technician has given me
+                hands-on experience with the physical infrastructure
+                behind modern technology. I work with networking,
+                security systems, access control, and other low-voltage
+                equipment while working as part of a project team.
+
+            </p>
+
+        </div>
+
+
+        <!-- RESPONSIBILITIES -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                What I Do
+            </h2>
+
+            <div class="skill-grid">
+
+                <div class="skill-box">
+                    Install and terminate Cat6 cabling
+                </div>
+
+                <div class="skill-box">
+                    Install IP cameras and wireless access points
+                </div>
+
+                <div class="skill-box">
+                    Install access-control systems
+                </div>
+
+                <div class="skill-box">
+                    Work with racks, patch panels, and switches
+                </div>
+
+                <div class="skill-box">
+                    Test and troubleshoot network cabling
+                </div>
+
+                <div class="skill-box">
+                    Install network and security equipment
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OUTPUTS -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                What I Build
+            </h2>
+
+            <div class="build-grid">
+
+                <div class="build-box">
+                    CAT6 Networks
+                </div>
+
+                <div class="build-box">
+                    IP Cameras
+                </div>
+
+                <div class="build-box">
+                    Access Control
+                </div>
+
+                <div class="build-box">
+                    Patch Panels
+                </div>
+
+                <div class="build-box">
+                    Network Equipment
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHALLENGES -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                Challenges
+            </h2>
+
+            <p class="job-description">
+
+                Field work requires more than simply knowing how to
+                install equipment. Every project can have different
+                layouts, cable paths, equipment, and requirements.
+                I have learned to adapt to different work environments,
+                troubleshoot problems, pay attention to details, and
+                make sure installations are completed accurately.
+
+            </p>
+
+        </div>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+
+            <div class="skill-grid">
+
+                <div class="skill-box">
+                    Cat6 Installation & Termination
+                </div>
+
+                <div class="skill-box">
+                    Network Cabling
+                </div>
+
+                <div class="skill-box">
+                    IP Cameras
+                </div>
+
+                <div class="skill-box">
+                    Wireless Access Points
+                </div>
+
+                <div class="skill-box">
+                    Access-Control Systems
+                </div>
+
+                <div class="skill-box">
+                    Patch Panels & Network Switches
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRANSFERABLE SKILLS -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                Transferable Skills
+            </h2>
+
+            <div class="skill-grid">
+
+                <div class="skill-box">
+                    Problem Solving
+                </div>
+
+                <div class="skill-box">
+                    Attention to Detail
+                </div>
+
+                <div class="skill-box">
+                    Teamwork
+                </div>
+
+                <div class="skill-box">
+                    Troubleshooting
+                </div>
+
+                <div class="skill-box">
+                    Adaptability
+                </div>
+
+                <div class="skill-box">
+                    Following Project Specifications
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TAKEAWAYS -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                What I Learned
+            </h2>
+
+            <div class="takeaway-grid">
+
+                <div class="takeaway">
+
+                    <div class="takeaway-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Technical Confidence
+                    </h3>
+
+                    <p>
+                        I developed hands-on experience with
+                        networking infrastructure and
+                        low-voltage systems.
+                    </p>
+
+                </div>
+
+
+                <div class="takeaway">
+
+                    <div class="takeaway-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Field work taught me how to troubleshoot
+                        physical infrastructure and adapt when
+                        things do not go exactly as planned.
+                    </p>
+
+                </div>
+
+
+                <div class="takeaway">
+
+                    <div class="takeaway-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Teamwork
+                    </h3>
+
+                    <p>
+                        Large installations require communication,
+                        coordination, and reliability across
+                        the project team.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMPLOYER VALUE -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                What I Bring to an Employer
+            </h2>
+
+            <div class="value-box">
+
+                My experience gives me a perspective that goes beyond
+                classroom knowledge. I understand how network
+                infrastructure and technology are physically installed
+                and connected, while my IT education has given me
+                experience with programming, databases, operating
+                systems, and networking.
+
+                <br><br>
+
+                This combination allows me to approach technology
+                problems from both a technical and practical
+                perspective. I can understand the technology itself
+                while also understanding the importance of accurate
+                installation, troubleshooting, teamwork, and
+                reliability.
+
+            </div>
+
+        </div>
+
+
+        <!-- ADDITIONAL EXPERIENCE -->
+
+        <div class="experience-section">
+
+            <h2 class="section-title">
+                Additional Experience
+            </h2>
+
+            <div class="additional">
+
+                <h3>
+                    Publix — Cashier
+                </h3>
+
+                <p>
+                    Tallahassee, FL | March 2023 - Present
+                </p>
+
+                <p>
+                    Working at Publix has strengthened my customer
+                    service, communication, teamwork, and
+                    problem-solving skills. I regularly handle
+                    transactions accurately, assist customers with
+                    questions and issues, and help maintain efficient
+                    front-end operations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <a
+                href="https://nathanlewis7.github.io/Interactive-Resume/index.html?return=experience"
+                class="button back-button">
+
+                Back to Game
+
+            </a>
+
+            <a
+                href="projects.html"
+                class="button">
+
+                View My Projects
+
+            </a>
+
+            <a
+                href="homepage.html"
+                class="button">
+
+                Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
