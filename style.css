@@ -138,6 +138,15 @@ body {
         5px 5px #70451f;
 }
 
+/* added center-sign function to center my directions */
+.center-sign {
+    margin-top: 8px;
+
+    font-size: 20px;
+
+    text-align: center;
+    
+}
 
 .sign-subtitle {
     margin-top: 8px;
