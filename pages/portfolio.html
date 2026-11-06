@@ -134,6 +134,11 @@
             line-height: 1.6;
         }
 
+        .project-content ul {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
         /* SCREENSHOTS */
 
         .screenshot {
@@ -165,6 +170,54 @@
 
         .screenshot-pair .screenshot {
             margin: 0;
+        }
+
+        /* PDF PREVIEW */
+
+        .pdf-preview {
+            margin: 0;
+        }
+
+        .pdf-frame {
+            display: block;
+            width: 100%;
+            height: 200px;
+            border: 3px solid #222;
+            border-radius: 10px;
+            background: #f3f3f3;
+        }
+
+        .pdf-fallback {
+            padding: 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .pdf-fallback a {
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+        .pdf-actions {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #1d4ed8;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        .download-btn:hover,
+        .download-btn:focus-visible {
+            background: #1e3a8a;
         }
 
         /* SKILLS */
@@ -313,6 +366,8 @@
         <div class="project-index">
             <a href="#poker">Poker Game</a>
             <a href="#streaming">Streaming Website</a>
+            <a href="#sql">SQL Server Project</a>
+            <a href="#rproject">R Project</a>
         </div>
 
 
@@ -450,6 +505,24 @@
                         better tie-breaking when both players have the
                         same type of hand.
                     </p>
+
+                </div>
+
+                <div class="pdf-preview">
+
+                    <object class="pdf-frame"
+                            data="pdfs/PokerGUI_Code_Formatted.pdf#toolbar=0&navpanes=0&view=FitH"
+                            type="application/pdf"
+                            aria-label="Preview of the Poker Game code">
+                        <div class="pdf-fallback">
+                            Preview not available in this browser.
+                            <a href="pdfs/PokerGUI_Code_Formatted.pdf" target="_blank" rel="noopener">Open the PDF</a>
+                        </div>
+                    </object>
+
+                    <div class="pdf-actions">
+                        <a class="download-btn" href="pdfs/PokerGUI_Code_Formatted.pdf" download="Poker Game Code.pdf">Download PDF</a>
+                    </div>
 
                 </div>
 
@@ -612,6 +685,98 @@
                         myself, and add real video playback and
                         separate profiles.
                     </p>
+
+                </div>
+
+                <div class="pdf-preview">
+
+                    <object class="pdf-frame"
+                            data="pdfs/Server.pdf#toolbar=0&navpanes=0&view=FitH"
+                            type="application/pdf"
+                            aria-label="Preview of the Streaming Website code">
+                        <div class="pdf-fallback">
+                            Preview not available in this browser.
+                            <a href="pdfs/Server.pdf" target="_blank" rel="noopener">Open the PDF</a>
+                        </div>
+                    </object>
+
+                    <div class="pdf-actions">
+                        <a class="download-btn" href="pdfs/Server.pdf" download="Streaming Website Code.pdf">Download PDF</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 3: SQL SERVER -->
+
+        <div class="project" id="sql">
+
+            <div class="project-header">
+
+                <h2>SQL Server Project</h2>
+
+                <p>SQL Server • T-SQL • Database Design</p>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="pdf-preview">
+
+                    <object class="pdf-frame"
+                            data="pdfs/SQL_Server_Project.pdf#toolbar=0&navpanes=0&view=FitH"
+                            type="application/pdf"
+                            aria-label="Preview of the SQL Server Project">
+                        <div class="pdf-fallback">
+                            Preview not available in this browser.
+                            <a href="pdfs/SQL_Server_Project.pdf" target="_blank" rel="noopener">Open the PDF</a>
+                        </div>
+                    </object>
+
+                    <div class="pdf-actions">
+                        <a class="download-btn" href="pdfs/SQL_Server_Project.pdf" download="SQL Server Project.pdf">Download PDF</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 4: R PROJECT -->
+
+        <div class="project" id="rproject">
+
+            <div class="project-header">
+
+                <h2>R Project</h2>
+
+                <p>R • Data Analysis • dplyr • ggplot2</p>
+
+            </div>
+
+            <div class="project-content">
+
+                <div class="pdf-preview">
+
+                    <object class="pdf-frame"
+                            data="pdfs/R_Project.pdf#toolbar=0&navpanes=0&view=FitH"
+                            type="application/pdf"
+                            aria-label="Preview of the R Project">
+                        <div class="pdf-fallback">
+                            Preview not available in this browser.
+                            <a href="pdfs/R_Project.pdf" target="_blank" rel="noopener">Open the PDF</a>
+                        </div>
+                    </object>
+
+                    <div class="pdf-actions">
+                        <a class="download-btn" href="pdfs/R_Project.pdf" download="R Project.pdf">Download PDF</a>
+                    </div>
 
                 </div>
 
