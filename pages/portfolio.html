@@ -175,7 +175,7 @@
         /* PDF PREVIEW */
 
         .pdf-preview {
-            margin: 0;
+            margin: 0 0 25px;
         }
 
         .pdf-frame {
@@ -385,11 +385,23 @@
 
             <div class="project-content">
 
-                <figure class="screenshot">
-                    <img src="images/PokerSS.png"
-                         alt="Screenshot of the Texas Hold'em poker game showing the green table, community cards, and betting buttons">
-                    <figcaption>The poker game during a hand</figcaption>
-                </figure>
+                <div class="pdf-preview">
+
+                    <object class="pdf-frame"
+                            data="pdfs/PokerGUI_Code_Formatted.pdf#toolbar=0&navpanes=0&view=FitH"
+                            type="application/pdf"
+                            aria-label="Preview of the Poker Game code">
+                        <div class="pdf-fallback">
+                            Preview not available in this browser.
+                            <a href="pdfs/PokerGUI_Code_Formatted.pdf" target="_blank" rel="noopener">Open the PDF</a>
+                        </div>
+                    </object>
+
+                    <div class="pdf-actions">
+                        <a class="download-btn" href="pdfs/PokerGUI_Code_Formatted.pdf" download="Poker Game Code.pdf">Download PDF</a>
+                    </div>
+
+                </div>
 
                 <h3>Project Overview</h3>
 
@@ -508,24 +520,6 @@
 
                 </div>
 
-                <div class="pdf-preview">
-
-                    <object class="pdf-frame"
-                            data="pdfs/PokerGUI_Code_Formatted.pdf#toolbar=0&navpanes=0&view=FitH"
-                            type="application/pdf"
-                            aria-label="Preview of the Poker Game code">
-                        <div class="pdf-fallback">
-                            Preview not available in this browser.
-                            <a href="pdfs/PokerGUI_Code_Formatted.pdf" target="_blank" rel="noopener">Open the PDF</a>
-                        </div>
-                    </object>
-
-                    <div class="pdf-actions">
-                        <a class="download-btn" href="pdfs/PokerGUI_Code_Formatted.pdf" download="Poker Game Code.pdf">Download PDF</a>
-                    </div>
-
-                </div>
-
             </div>
 
         </div>
@@ -545,19 +539,21 @@
 
             <div class="project-content">
 
-                <div class="screenshot-pair">
+                <div class="pdf-preview">
 
-                    <figure class="screenshot">
-                        <img src="images/movies.png"
-                             alt="Screenshot of the Movies page with poster cards for The Dark Knight, Interstellar, and Avatar">
-                        <figcaption>Movies page</figcaption>
-                    </figure>
+                    <object class="pdf-frame"
+                            data="pdfs/Server.pdf#toolbar=0&navpanes=0&view=FitH"
+                            type="application/pdf"
+                            aria-label="Preview of the Streaming Website code">
+                        <div class="pdf-fallback">
+                            Preview not available in this browser.
+                            <a href="pdfs/Server.pdf" target="_blank" rel="noopener">Open the PDF</a>
+                        </div>
+                    </object>
 
-                    <figure class="screenshot">
-                        <img src="images/Profiles.png"
-                             alt="Screenshot of the Who is watching profile selection screen">
-                        <figcaption>Profile selection screen</figcaption>
-                    </figure>
+                    <div class="pdf-actions">
+                        <a class="download-btn" href="pdfs/Server.pdf" download="Streaming Website Code.pdf">Download PDF</a>
+                    </div>
 
                 </div>
 
@@ -688,24 +684,6 @@
 
                 </div>
 
-                <div class="pdf-preview">
-
-                    <object class="pdf-frame"
-                            data="pdfs/Server.pdf#toolbar=0&navpanes=0&view=FitH"
-                            type="application/pdf"
-                            aria-label="Preview of the Streaming Website code">
-                        <div class="pdf-fallback">
-                            Preview not available in this browser.
-                            <a href="pdfs/Server.pdf" target="_blank" rel="noopener">Open the PDF</a>
-                        </div>
-                    </object>
-
-                    <div class="pdf-actions">
-                        <a class="download-btn" href="pdfs/Server.pdf" download="Streaming Website Code.pdf">Download PDF</a>
-                    </div>
-
-                </div>
-
             </div>
 
         </div>
@@ -743,6 +721,89 @@
 
                 </div>
 
+                <h3>Project Overview</h3>
+
+                <p>
+                    This project is a pet store database built in SQL Server. A single script creates a database called dbpetstore, builds two related tables, fills them with sample data, and then checks the results with a few queries.
+                </p>
+
+                <h3>My Role</h3>
+
+                <p>
+                    I wrote the whole script myself, from creating the database and designing the tables to choosing the data types, setting up the keys, and adding the sample records.
+                </p>
+
+                <h3>What I Built</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Database Creation Script</div>
+                    <div class="skill">Pet Store Table</div>
+                    <div class="skill">Pet Table</div>
+                    <div class="skill">Primary and Foreign Keys</div>
+                    <div class="skill">Cascading Updates and Deletes</div>
+                    <div class="skill">Sample Data Inserts</div>
+                </div>
+
+                <h3>Main Challenge</h3>
+
+                <div class="challenge">
+
+                    <p>
+                        The hardest part was connecting the two tables correctly. Every pet has to belong to a store, so the pet table uses a foreign key that points back to the pet store table, and the stores have to exist before any pets can be added.
+                    </p>
+
+                    <p>
+                        I also wanted the script to be re-runnable. It checks whether the database and tables already exist and removes them first, so I can run it again from a clean start every time.
+                    </p>
+
+                </div>
+
+                <h3>Technical Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">SQL Server</div>
+                    <div class="skill">T-SQL</div>
+                    <div class="skill">Table Design</div>
+                    <div class="skill">Data Types and Constraints</div>
+                    <div class="skill">Relational Databases</div>
+                    <div class="skill">SELECT Queries</div>
+                </div>
+
+                <h3>Transferable Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Problem Solving</div>
+                    <div class="skill">Attention to Detail</div>
+                    <div class="skill">Organization</div>
+                    <div class="skill">Troubleshooting</div>
+                    <div class="skill">Critical Thinking</div>
+                    <div class="skill">Persistence</div>
+                </div>
+
+                <h3>What I Learned</h3>
+
+                <div class="learning">
+
+                    <p>
+                        This project taught me how the tables in a database are tied together. I learned how primary keys and foreign keys keep the data consistent, and how cascading rules update or delete related records automatically.
+                    </p>
+
+                    <p>
+                        I also practiced picking data types that fit the data, such as short codes for states and decimals for prices.
+                    </p>
+
+                </div>
+
+                <h3>What I Would Improve</h3>
+
+                <div class="future">
+
+                    <p>
+                        The database only has two tables right now. I would add tables for customers and sales, then write queries that join them together to answer questions like which store sells the most pets.
+                    </p>
+
+                </div>
+
             </div>
 
         </div>
@@ -777,6 +838,89 @@
                     <div class="pdf-actions">
                         <a class="download-btn" href="pdfs/R_Project.pdf" download="R Project.pdf">Download PDF</a>
                     </div>
+
+                </div>
+
+                <h3>Project Overview</h3>
+
+                <p>
+                    This project analyzes a video game sales data set in R. It is also a measurable checkpoint toward my final project. The main question is: what factors are associated with higher video game sales?
+                </p>
+
+                <h3>My Role</h3>
+
+                <p>
+                    I wrote the R code, built the visualization, and wrote up the research question and the smaller questions that break it down.
+                </p>
+
+                <h3>What I Built</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Sales by Genre</div>
+                    <div class="skill">Sales by Platform</div>
+                    <div class="skill">Platform and Genre Comparison</div>
+                    <div class="skill">Regional Sales Reshaping</div>
+                    <div class="skill">Faceted Scatter Plot</div>
+                    <div class="skill">Written Analysis</div>
+                </div>
+
+                <h3>Main Challenge</h3>
+
+                <div class="challenge">
+
+                    <p>
+                        The biggest challenge was working with data that had to be grouped and reshaped before it could be compared. I had to total global sales by genre, by platform, and by both together, and then reshape the regional sales columns so the regions could be compared side by side.
+                    </p>
+
+                    <p>
+                        I used AI to help me find the dplyr functions group_by() and summarise(), and to learn about pivot_longer() from the tidyverse.
+                    </p>
+
+                </div>
+
+                <h3>Technical Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">R</div>
+                    <div class="skill">dplyr</div>
+                    <div class="skill">tidyverse</div>
+                    <div class="skill">ggplot2</div>
+                    <div class="skill">Data Grouping and Summaries</div>
+                    <div class="skill">Data Visualization</div>
+                </div>
+
+                <h3>Transferable Skills</h3>
+
+                <div class="skill-grid">
+                    <div class="skill">Problem Solving</div>
+                    <div class="skill">Independent Learning</div>
+                    <div class="skill">Critical Thinking</div>
+                    <div class="skill">Asking Good Questions</div>
+                    <div class="skill">Attention to Detail</div>
+                    <div class="skill">Persistence</div>
+                </div>
+
+                <h3>What I Learned</h3>
+
+                <div class="learning">
+
+                    <p>
+                        This project showed me how a big question can be split into smaller questions that the data can actually answer. Each smaller question became its own grouped summary.
+                    </p>
+
+                    <p>
+                        I also learned how much a clear chart helps, since the plot of sales by year, genre, and platform shows patterns that a table of numbers hides.
+                    </p>
+
+                </div>
+
+                <h3>What I Would Improve</h3>
+
+                <div class="future">
+
+                    <p>
+                        I would finish the regional comparison, write out what the results say, and look at more factors than genre and platform, such as the year a game was released.
+                    </p>
 
                 </div>
 
